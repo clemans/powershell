@@ -7,8 +7,6 @@
 *.sln.docstates
 
 # Build results
-/Debug/*
-/[Dd]ebug/*
 [Dd]ebug/
 [Rr]elease/
 x64/
