@@ -2,7 +2,7 @@
 
 ## System Administration
 
-**A directory of functions that of which aid and automate system administration tasks for Microsft Windows IT Professionals.**
+**A directory of functions that aim to automate and assist in Microsoft Windows system administration.**
 
 #### `Add-EnvironmentVariable`
 
