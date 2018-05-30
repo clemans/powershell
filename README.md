@@ -1,5 +1,4 @@
-### `clemans/powershell` is a collection of Microsoft PowerShell resources that can be used to aid IT professionals. 
-### This project is comprised of the following system administration material:
+### `clemans/powershell` is a collection of Microsoft PowerShell resources that can be used to aid IT professionals in system administration, automation, and more. This project is comprised of:
 
 ## System Administration
 
