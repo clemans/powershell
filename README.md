@@ -1,4 +1,5 @@
-### `clemans/powershell` is a collection of Microsoft PowerShell scripts, cmdlets, functions and modules that can be used to aid IT professionals. This PowerShell repository is comprised of the following:
+### `clemans/powershell` is a collection of Microsoft PowerShell resources that can be used to aid IT professionals. 
+### This project is comprised of the following system administration material:
 
 ## System Administration
 
