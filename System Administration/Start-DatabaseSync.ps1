@@ -33,7 +33,7 @@
 <# 
 
 .DESCRIPTION 
- Updates Active Directory user accounts using a MSSQL database single point-of-truth table. 
+ Updates Active Directory user accounts using a MSSQL database single source of truth (SSOT) table. 
 
 #> 
 
