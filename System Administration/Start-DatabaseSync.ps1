@@ -36,7 +36,7 @@
 <# 
 
 .DESCRIPTION 
- Updates Active Directory user accounts using with a MSSQL database. 
+ Updates Active Directory user accounts using a MSSQL database single point-of-truth table. 
 
 #> 
 
