@@ -4,7 +4,7 @@
 
 **A directory of functions that aim to automate and assist in Microsoft Windows system administration.**
 
-#### `Add-EnvironmentVariable`
+#### `Add-EnvironmentVariable.ps1`
 
 Function that takes the input of a folder path and appends it to the existing $ENV:PATH variable.
 
@@ -12,7 +12,7 @@ Function that takes the input of a folder path and appends it to the existing $E
 
 A quick script that safely encrypts a password and outputs to a file.
 
-#### `ConnectTo-Exchange`
+#### `ConnectTo-Exchange.ps1`
 
 A function that creates and establishes a Microsoft Exchange command-line connection allowing to import the Microsoft.Exchange module.
 
@@ -29,7 +29,7 @@ A workaround function that resolves DisplayName overlap in Active Directory. Thi
 
 A function that creates a new SQL connection, queries the specified MSSQL database, and outputs the specified tableset.
 
-#### `Set-FullPermissions`
+#### `Set-FullPermissions.ps1`
 
 A cmdlet that sets administration ownership and adds full permission inheritance to a specified path file or folder. 
 By default, the local system administrators group takes ownership and is provided full permissions.
