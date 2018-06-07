@@ -8,14 +8,35 @@
 
 Function that takes the input of a folder path and appends it to the existing $ENV:PATH variable.
 
+#### `Create-SecurePassword.ps1`
+
+A quick script that safely encrypts a password and outputs to a file.
+
 #### `ConnectTo-Exchange`
 
 A function that creates and establishes a Microsoft Exchange command-line connection allowing to import the Microsoft.Exchange module.
 
+#### `Find-ADUser.ps1`
+
+A function that attempts to return an Active Directory user object using string input such as a SQL record DisplayName string.
+
+
+#### `Get-ADManager.ps1`
+
+A workaround function that resolves DisplayName overlap in Active Directory. This function compliments the `Start-DatabaseSync.ps1` script.
+
+#### `New-SQLDataSet.ps1`
+
+A function that creates a new SQL connection, queries the specified MSSQL database, and outputs the specified tableset.
+
 #### `Set-FullPermissions`
 
- A cmdlet that sets administration ownership and adds full permission inheritance to a specified path file or folder. 
- By default, the local system administrators group takes ownership and is provided full permissions.
+A cmdlet that sets administration ownership and adds full permission inheritance to a specified path file or folder. 
+By default, the local system administrators group takes ownership and is provided full permissions.
+
+#### `Start-DatabaseSync.ps1`
+
+A Main() script that updates Active Directory user accounts using a MSSQL database single point-of-truth table by passing splatted attributes.
 
 ## License
 

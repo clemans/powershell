@@ -30,15 +30,15 @@
 
 #>
 
-#Requires -Module ActiveDirectory
-#Requires -Module SQLPS
-
 <# 
 
 .DESCRIPTION 
  Updates Active Directory user accounts using a MSSQL database single point-of-truth table. 
 
 #> 
+
+#Requires -Module ActiveDirectory
+#Requires -Module SQLPS
 
 Function Main()
 {
