@@ -20,14 +20,25 @@ A function that creates and establishes a Microsoft Exchange command-line connec
 
 A function that attempts to return an Active Directory user object using string input such as a SQL record DisplayName string.
 
-
 #### `Get-ADManager.ps1`
 
 A workaround function that resolves DisplayName overlap in Active Directory. This function compliments the `Start-DatabaseSync.ps1` script.
 
+#### `New-HttpsListener.ps1`
+
+A group policy script that creates an HTTP/HTTPS WS-Man listener for PowerShell remoting.
+
 #### `New-SQLDataSet.ps1`
 
 A function that creates a new SQL connection, queries the specified MSSQL database, and outputs the specified tableset.
+
+#### `PowerShellRemoting.md`
+
+PowerShell remoting group policy object documentation. Requires scripts: `New-HttpsListener.ps1` & `Set-PowerShell_SDDL.ps1` 
+
+#### `Set-PowerShell_SDDL.ps1`
+
+A group policy script that sets SDDLs on the PSSessionConfiguration of a client machine's PowerShell instance.
 
 #### `Set-FullPermissions.ps1`
 

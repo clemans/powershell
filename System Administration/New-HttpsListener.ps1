@@ -5,7 +5,7 @@ $wmiParams = @{
 
     ValueSet        = @{Hostname = 
                              [System.Net.NetworkInformation.IPGlobalProperties]::GetIPGlobalProperties() | 
-                             % {"{0}.{1}" -f $_.Hostname,$_.DomainName};
+                             ForEach-Object {"{0}.{1}" -f $_.Hostname,$_.DomainName};
 
                         CertificateThumbprint = 
                              (Get-ChildItem -Path "Cert:\LocalMachine\My\")[-1].ThumbPrint
