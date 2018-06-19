@@ -22,7 +22,7 @@ A function that attempts to return an Active Directory user object using string 
 
 #### `>_: Get-ADManager.ps1`
 
-A workaround function that resolves DisplayName overlap in Active Directory. This function compliments the `Start-DatabaseSync.ps1` script.
+A workaround function that fixes DisplayName overlap in Active Directory. See: `Start-DatabaseSync.ps1`.
 
 #### `>_: Get-PCs.ps1`
 
