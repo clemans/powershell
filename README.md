@@ -4,31 +4,35 @@
 
 **A directory of functions that aim to automate and assist in Microsoft Windows system administration.**
 
-#### `Add-EnvironmentVariable.ps1`
+#### `>_: Add-EnvironmentVariable.ps1`
 
 Function that takes the input of a folder path and appends it to the existing $ENV:PATH variable.
 
-#### `Create-SecurePassword.ps1`
+#### `>_: Create-SecurePassword.ps1`
 
 A quick script that safely encrypts a password and outputs to a file.
 
-#### `ConnectTo-Exchange.ps1`
+#### `>_: ConnectTo-Exchange.ps1`
 
 A function that creates and establishes a Microsoft Exchange command-line connection allowing to import the Microsoft.Exchange module.
 
-#### `Find-ADUser.ps1`
+#### `>_: Find-ADUser.ps1`
 
 A function that attempts to return an Active Directory user object using string input such as a SQL record DisplayName string.
 
-#### `Get-ADManager.ps1`
+#### `>_: Get-ADManager.ps1`
 
 A workaround function that resolves DisplayName overlap in Active Directory. This function compliments the `Start-DatabaseSync.ps1` script.
 
-#### `New-HttpsListener.ps1`
+#### `>_: Get-PCs.ps1`
+
+A custom function that attempts to find a user's computer when searching their name in the ADComputer's description attribute.
+
+#### `>_: New-HttpsListener.ps1`
 
 A group policy script that creates an HTTP/HTTPS WS-Man listener for PowerShell remoting.
 
-#### `New-SQLDataSet.ps1`
+#### `>_: New-SQLDataSet.ps1`
 
 A function that creates a new SQL connection, queries the specified MSSQL database, and outputs the specified tableset.
 
@@ -36,18 +40,26 @@ A function that creates a new SQL connection, queries the specified MSSQL databa
 
 PowerShell remoting group policy object documentation. Requires scripts: `New-HttpsListener.ps1` & `Set-PowerShell_SDDL.ps1` 
 
-#### `Set-PowerShell_SDDL.ps1`
+#### `>_: Set-CustomDirectoryACLs.ps1`
+
+A custom function that sets a root folders' parents' ACLs on child objects. Useful if there are multiple parent folders with identical child objects. (Created as a workaround) 
+
+#### `>_: Set-PowerShell_SDDL.ps1`
 
 A group policy script that sets SDDLs on the PSSessionConfiguration of a client machine's PowerShell instance.
 
-#### `Set-FullPermissions.ps1`
+#### `>_: Set-FullPermissions.ps1`
 
 A cmdlet that sets administration ownership and adds full permission inheritance to a specified path file or folder. 
 By default, the local system administrators group takes ownership and is provided full permissions.
 
-#### `Start-DatabaseSync.ps1`
+#### `>_: Start-DatabaseSync.ps1`
 
 A Main() script that updates Active Directory user accounts using a MSSQL database single point-of-truth table by passing splatted attributes.
+
+#### `>_: Start-TerminateUserProcess.ps1
+
+A multi-function custom script which aims to automate a specific company's disable user account process.
 
 ## License
 
