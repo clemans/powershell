@@ -57,7 +57,7 @@ By default, the local system administrators group takes ownership and is provide
 
 A Main() script that updates Active Directory user accounts using a MSSQL database single point-of-truth table by passing splatted attributes.
 
-#### `>_: Start-TerminateUserProcess.ps1
+#### `>_: Start-TerminateUserProcess.ps1`
 
 A multi-function custom script which aims to automate a specific company's disable user account process.
 
