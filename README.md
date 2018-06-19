@@ -10,7 +10,7 @@ Function that takes the input of a folder path and appends it to the existing $E
 
 #### `>_: Create-SecurePassword.ps1`
 
-A quick script that safely encrypts a password and outputs to a file.
+A quick script that encrypts a password and outputs to a file.
 
 #### `>_: ConnectTo-Exchange.ps1`
 
@@ -22,7 +22,8 @@ A function that attempts to return an Active Directory user object using string 
 
 #### `>_: Get-ADManager.ps1`
 
-A workaround function that fixes DisplayName overlap in Active Directory. See: `Start-DatabaseSync.ps1`.
+A workaround function that fixes DisplayName overlap in Active Directory. 
+See Main() for more information: `Start-DatabaseSync.ps1`.
 
 #### `>_: Get-PCs.ps1`
 
@@ -38,7 +39,8 @@ A function that creates a new SQL connection, queries the specified MSSQL databa
 
 #### `📖: PowerShellRemoting.md`
 
-PowerShell remoting group policy object documentation. Requires scripts: `New-HttpsListener.ps1` & `Set-PowerShell_SDDL.ps1` 
+PowerShell remoting group policy object documentation. 
+Requires scripts: `New-HttpsListener.ps1` & `Set-PowerShell_SDDL.ps1` 
 
 #### `>_: Set-CustomDirectoryACLs.ps1`
 
@@ -50,12 +52,11 @@ A group policy script that sets SDDLs on the PSSessionConfiguration of a client 
 
 #### `>_: Set-FullPermissions.ps1`
 
-A cmdlet that sets administration ownership and adds full permission inheritance to a specified path file or folder. 
-By default, the local system administrators group takes ownership and is provided full permissions.
+A cmdlet that sets administration ownership and adds full permission inheritance to a specified path file or folder. By default, the local system administrators group takes ownership and is provided full permissions.
 
 #### `>_: Start-DatabaseSync.ps1`
 
-A Main() script that updates Active Directory user accounts using a MSSQL database single point-of-truth table by passing splatted attributes.
+A Main() script that updates Active Directory user accounts by constructing PSObjects using a provided MSSQL database table.
 
 #### `>_: Start-TerminateUserProcess.ps1`
 
