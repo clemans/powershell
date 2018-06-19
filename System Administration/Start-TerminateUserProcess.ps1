@@ -15,7 +15,7 @@
 
 .LICENSEURI https://github.com/clemans/powershell/blob/master/LICENSE
 
-.PROJECTURI https://git.io/ffCbr
+.PROJECTURI https://git.io/ffCb5
 
 .ICONURI 
 
