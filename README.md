@@ -36,7 +36,7 @@ A group policy script that creates an HTTP/HTTPS WS-Man listener for PowerShell 
 
 A function that creates a new SQL connection, queries the specified MSSQL database, and outputs the specified tableset.
 
-#### `PowerShellRemoting.md`
+#### `📖: PowerShellRemoting.md`
 
 PowerShell remoting group policy object documentation. Requires scripts: `New-HttpsListener.ps1` & `Set-PowerShell_SDDL.ps1` 
 
