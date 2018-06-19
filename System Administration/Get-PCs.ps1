@@ -79,7 +79,7 @@ try {
                 $ADComputer = Get-ADComputer -Identity $PC.Split('.')[0] -Properties IPv4address,Description;
                 
                 #Check connectivity status, set variable
-                $status = @{$true = 'UP'; $false = 'DOWN'}[{Test-Connection -Computername $PC -Count 1}]
+                $status = @{$true = 'UP'; $false = 'DOWN'}[[bool](Test-Connection -Computername $PC -Count 1 -Quiet)]
                 
                 #Check uptime status, set variable
                 $uptime = @{$true = $((Get-Uptime -ComputerName $PC).Uptime); $false ='N/A' }[$status -eq 'UP']
