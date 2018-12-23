@@ -14,7 +14,7 @@
 
 .LICENSEURI 
 
-.PROJECTURI 
+.PROJECTURI https://git.io/fhJHH
 
 .ICONURI 
 
