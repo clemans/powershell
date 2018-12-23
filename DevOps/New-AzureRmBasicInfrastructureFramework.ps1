@@ -1,6 +1,6 @@
 <#PSScriptInfo
 
-.VERSION 1.0.0.0
+.VERSION 1.0.0.1
 
 .GUID db939afc-8af7-4a31-9205-2afcc4140605
 
@@ -14,7 +14,7 @@
 
 .LICENSEURI 
 
-.PROJECTURI https://git.io/fhJHH
+.PROJECTURI 
 
 .ICONURI 
 
@@ -53,7 +53,7 @@ Param()
                          s2sName          = Read-Host "Input the location name you wish to create a site-to-site IPsec VPN connection (e.g. Compton)"
                          sharedKey        = Read-Host "Input a shared key for the site-to-site connection (avoid special characters)"
                          rLocation        = if(((Get-AzureRmLocation).Location) -contains ($result = Read-Host "Enter the location for your Azure resources (For valid locations, cancel & type: Get-AzureRmLocation)")){$result} else{throw "Invalid location. For a list of valid locations, type: Get-AzureRmLocation"; Continue}
-                         inputCredentials = @{ Username = 'root'; Password = Read-Host "Type the password for local user .\ROOT" -AsSecureString}
+                         inputCredentials = @{ Username = 'stem'; Password = Read-Host "Type the password for local user .\stem" -AsSecureString}
                          numVms           = [int](Read-Host "How many VMs do you wish to create? (integers only)" -ea Stop)
                        }
 
@@ -158,8 +158,7 @@ Sleep(3)
 Sleep(3)
 #CREATE VIRTUAL NETWORK GATEWAY
     New-AzureRmVirtualNetworkGateway -Name $vngName -ResourceGroupName $rg.ResourceGroupName -Location $rg.Location -IpConfigurations $vngwIpConfig -GatewayType Vpn -VpnType RouteBased -GatewaySku Basic -ErrorAction Stop
-    $vngw = Get-AzureRmVirtualNetworkGateway -Name $((Get-AzureRmResource -ResourceType Microsoft.Network/virtualNetworkGateways)[0]).Name -ResourceGroupName $rg.ResourceGroupName
-
+d
 Sleep(1)
 #CREATE STORAGE ACCOUNT
     $azureStorage = New-AzureRmStorageAccount -ResourceGroupName $rg.ResourceGroupName -Name "$pPrefix`storage01" -Location  $rg.Location -SkuName "Standard_LRS" -Kind "Storage" -ErrorAction Stop
@@ -204,7 +203,8 @@ foreach ($vm in $VMConfigs)
 
 #CREATE SITE-TO-SITE CONNECTION
     $vngwS2SName = [System.String]::Concat(($s2sName.ToLower()[0..13]) -join "",'Connection')
-    
+    $vngw = Get-AzureRmVirtualNetworkGateway -Name $((Get-AzureRmResource -ResourceType Microsoft.Network/virtualNetworkGateways)[0]).Name -ResourceGroupName $rg.ResourceGroupName
+
     New-AzureRmVirtualNetworkGatewayConnection -Name $vngwS2SName `
                                  -ResourceGroupName $rg.ResourceGroupName `
                                  -Location $rg.Location `
