@@ -1,6 +1,6 @@
 <#PSScriptInfo
 
-.VERSION 1.0.0.1
+.VERSION 1.0.0.2
 
 .GUID db939afc-8af7-4a31-9205-2afcc4140605
 
@@ -157,8 +157,8 @@ Sleep(3)
 
 Sleep(3)
 #CREATE VIRTUAL NETWORK GATEWAY
-    New-AzureRmVirtualNetworkGateway -Name $vngName -ResourceGroupName $rg.ResourceGroupName -Location $rg.Location -IpConfigurations $vngwIpConfig -GatewayType Vpn -VpnType RouteBased -GatewaySku Basic -ErrorAction Stop
-d
+    New-AzureRmVirtualNetworkGateway -Name $vngName -ResourceGroupName $rg.ResourceGroupName -Location $rg.Location -IpConfigurations $vngwIpConfig -GatewayType Vpn -VpnType RouteBased -GatewaySku Standard -ErrorAction Stop
+
 Sleep(1)
 #CREATE STORAGE ACCOUNT
     $azureStorage = New-AzureRmStorageAccount -ResourceGroupName $rg.ResourceGroupName -Name "$pPrefix`storage01" -Location  $rg.Location -SkuName "Standard_LRS" -Kind "Storage" -ErrorAction Stop
@@ -202,7 +202,15 @@ foreach ($vm in $VMConfigs)
     $IpSecPolicy = New-AzureRmIpsecPolicy -IkeEncryption AES256 -IkeIntegrity SHA384  -IpsecEncryption AES256 -IpsecIntegrity SHA256 -DhGroup DHGroup24 -PfsGroup None -SALifeTimeSeconds 14400 -SADataSizeKilobytes 102400000
 
 #CREATE SITE-TO-SITE CONNECTION
-    $vngwS2SName = [System.String]::Concat(($s2sName.ToLower()[0..13]) -join "",'Connection')
+
+#do { 
+#      $provisioningState = $(Get-AzureRmVirtualNetworkGateway -ResourceGroupName $rg.ResourceGroupName).ProvisioningState
+#      for ($i=50; $i -le 100; $i++){ Write-Progress -Activity Checking -Status 'Provisioning State' -PercentComplete $i;}; $provisioningState
+#   }
+#
+#while ($provisioningState -ne 'Succeeded')
+
+    $vngwS2SName = [System.String]::Concat(($s2sName.ToLower()[0..13]) -join "",'-IPSec','-s2s')
     $vngw = Get-AzureRmVirtualNetworkGateway -Name $((Get-AzureRmResource -ResourceType Microsoft.Network/virtualNetworkGateways)[0]).Name -ResourceGroupName $rg.ResourceGroupName
 
     New-AzureRmVirtualNetworkGatewayConnection -Name $vngwS2SName `
