@@ -62,6 +62,9 @@ A Main() script that updates Active Directory user accounts by constructing PSOb
 
 A multi-function custom script which aims to automate a specific company's disable user account process.
 
+## DevOps
+A directory of functions for implementing Microsoft Windows infrastructure and other useful scripts for Development Operations.
+
 ## License
 
 The repository and all individual scripts are under the [GNU GENERAL PUBLIC LICENSE](https://www.gnu.org/licenses/gpl.txt)
