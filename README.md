@@ -16,6 +16,10 @@ A quick script that encrypts a password and outputs to a file.
 
 A function that creates and establishes a Microsoft Exchange command-line connection allowing to import the Microsoft.Exchange module.
 
+#### `>_: Delete-MicrosoftToken.ps1`
+
+A basic function that by default iterates through a localhost's userprofiles and archives the Microsoft Office 365 user license tokens.
+
 #### `>_: Find-ADUser.ps1`
 
 A function that attempts to return an Active Directory user object using string input such as a SQL record DisplayName string.
@@ -64,6 +68,10 @@ A multi-function custom script which aims to automate a specific company's disab
 
 ## DevOps
 A directory of functions for implementing Microsoft Windows infrastructure and other useful scripts for Development Operations.
+
+#### `>_: New-AzureRmBasicInfrastructureFramework.ps1`
+
+An AzureRm script that automates the baseline implementation of an Azure infrastructure as a service (IaaS).
 
 ## License
 
