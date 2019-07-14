@@ -1,5 +1,21 @@
 ### `clemans/powershell` is a collection of Microsoft PowerShell resources that can be used to aid IT professionals in system administration, automation, and more. This project is comprised of:
 
+## DevOps/Azure
+
+**A directory of functions for implementing Microsoft Windows infrastructure and other useful scripts for Development Operations.**
+
+#### `>_: New-AzBasicInfrastructureFramework.ps1`
+
+An Azure (Az.*) script that automates the baseline implementation of an Azure infrastructure as a service (IaaS). 
+
+## Security
+
+**A directory of functions relating to the subject of IT security and useful scripts for maintaining a safe environment.**
+
+#### `>_: Delete-History.ps1`
+
+A collection of cmdlets that assist with the deletion of browsing and explorer related history. 
+
 ## System Administration
 
 **A directory of functions that aim to automate and assist in Microsoft Windows system administration.**
@@ -65,13 +81,6 @@ A Main() script that updates Active Directory user accounts by constructing PSOb
 #### `>_: Start-TerminateUserProcess.ps1`
 
 A multi-function custom script which aims to automate a specific company's disable user account process.
-
-## DevOps
-A directory of functions for implementing Microsoft Windows infrastructure and other useful scripts for Development Operations.
-
-#### `>_: New-AzureRmBasicInfrastructureFramework.ps1`
-
-An AzureRm script that automates the baseline implementation of an Azure infrastructure as a service (IaaS).
 
 ## License
 
