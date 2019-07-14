@@ -15,7 +15,7 @@
 
 .LICENSEURI 
 
-.PROJECTURI https://git.io/fjX0X
+.PROJECTURI https://git.io/fjX0M
 
 .ICONURI 
 
