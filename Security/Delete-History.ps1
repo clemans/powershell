@@ -1,4 +1,42 @@
-﻿#Maintenance Utilities
+﻿
+<#PSScriptInfo
+
+.VERSION 1.0.0.0
+
+.GUID 34273d63-ffe9-47ac-a660-12bc8db0f99e
+
+.AUTHOR ([string](0..23|%{[char][int](23+('808293819475237685788674879241808674828523768886').substring(($_*2),2))})).Replace(' ','')
+
+.COMPANYNAME 
+
+.COPYRIGHT 
+
+.TAGS 
+
+.LICENSEURI 
+
+.PROJECTURI https://git.io/fjX0X
+
+.ICONURI 
+
+.EXTERNALMODULEDEPENDENCIES 
+
+.REQUIREDSCRIPTS 
+
+.EXTERNALSCRIPTDEPENDENCIES 
+
+.RELEASENOTES
+
+
+#>
+
+<# 
+
+.DESCRIPTION 
+ A collection of cmdlets that assist with the deletion of browsing and explorer related history. 
+
+#> 
+
 Function Delete-IEHistory()
 {
     Get-Process iexplore -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue -Verbose
