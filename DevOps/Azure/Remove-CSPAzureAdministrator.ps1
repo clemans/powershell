@@ -17,7 +17,7 @@ Function Remove-CSPAzureAdministrator()
 
 .LICENSEURI 
 
-.PROJECTURI 
+.PROJECTURI https://git.io/fjX0r
 
 .ICONURI 
 
