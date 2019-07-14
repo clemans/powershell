@@ -16,7 +16,7 @@ Function Add-CSPAzureAdministrator()
 
 .LICENSEURI 
 
-.PROJECTURI 
+.PROJECTURI https://git.io/fjX0E
 
 .ICONURI 
 
