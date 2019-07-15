@@ -34,7 +34,7 @@
 <# 
 
 .DESCRIPTION 
- A collection of cmdlets that assist with the deletion of browsing and explorer related history. 
+A collection of functions that assist with the deletion of browsing and explorer related history. 
 
 #> 
 
@@ -157,40 +157,40 @@ Param(
     $Windows
 )
 
-switch ($true)
-{
-$All
-    {  
-        Delete-ChromeHistory
-        Delete-FirefoxHistory
-        Delete-IEHistory
-        Delete-WindowsHistory
-    }
-
-$Chrome
-    {  
-        Delete-ChromeHistory
-    }
-
-$Firefox
-    {  
-        Delete-FirefoxHistory
-    }
-
-$InternetExplorer
-    {  
-        Delete-IEHistory
-    }
-    
-$Windows
-    {
-        Delete-WindowsHistory
-    }
-
-Default 
+    switch ($true)
     {
         $All
+            {  
+                Delete-ChromeHistory
+                Delete-FirefoxHistory
+                Delete-IEHistory
+                Delete-WindowsHistory
+            }
+
+        $Chrome
+            {  
+                Delete-ChromeHistory
+            }
+
+        $Firefox
+            {  
+                Delete-FirefoxHistory
+            }
+
+        $InternetExplorer
+            {  
+                Delete-IEHistory
+            }
+    
+        $Windows
+            {
+                Delete-WindowsHistory
+            }
+
+        Default 
+            {
+                $All
+            }
     }
-} 
 }
 

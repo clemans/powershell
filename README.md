@@ -4,9 +4,18 @@
 
 **A directory of functions for implementing Microsoft Windows infrastructure and other useful scripts for Development Operations.**
 
+#### `>_: Add-CSPAzureAdministrator.ps1`
+
+An Azure function that automates the creation of external guest accounts and role assignments for Azure (IaaS) subscriptions.
+
+
 #### `>_: New-AzBasicInfrastructureFramework.ps1`
 
 An Azure (Az.*) script that automates the baseline implementation of an Azure infrastructure as a service (IaaS). 
+
+#### `>_: Remove-CSPAzureAdministrator.ps1`
+
+An Azure function that automates the removal of external guest accounts and role assignments for Azure (IaaS) subscriptions. 
 
 ## Security
 
@@ -14,7 +23,7 @@ An Azure (Az.*) script that automates the baseline implementation of an Azure in
 
 #### `>_: Delete-History.ps1`
 
-A collection of cmdlets that assist with the deletion of browsing and explorer related history. 
+A collection of functions that assist with the deletion of browsing and explorer related history. 
 
 ## System Administration
 
@@ -72,7 +81,7 @@ A group policy script that sets SDDLs on the PSSessionConfiguration of a client 
 
 #### `>_: Set-FullPermissions.ps1`
 
-A cmdlet that sets administration ownership and adds full permission inheritance to a specified path file or folder. By default, the local system administrators group takes ownership and is provided full permissions.
+A function that sets administration ownership and adds full permission inheritance to a specified path file or folder. By default, the local system administrators group takes ownership and is provided full permissions.
 
 #### `>_: Start-DatabaseSync.ps1`
 
