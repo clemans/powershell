@@ -1,7 +1,7 @@
 ﻿
 <#PSScriptInfo
 
-.VERSION 1.0.0.0
+.VERSION 1.0.0.1
 
 .GUID 34273d63-ffe9-47ac-a660-12bc8db0f99e
 
@@ -26,7 +26,8 @@
 .EXTERNALSCRIPTDEPENDENCIES 
 
 .RELEASENOTES
-
+1.0.0.0: Initial commit
+1.0.0.1: Updated if/statements to switch/statement.
 
 #>
 
@@ -137,7 +138,7 @@ Function Delete-History()
 Param(
 [Parameter(Mandatory=$false)]
     [Switch]
-    $All,
+    $All = $True,
 
 [Parameter(Mandatory=$false)]
     [Switch]
@@ -156,31 +157,40 @@ Param(
     $Windows
 )
 
-    if ($All)
-    {
+switch ($true)
+{
+$All
+    {  
         Delete-ChromeHistory
         Delete-FirefoxHistory
         Delete-IEHistory
         Delete-WindowsHistory
     }
 
-    if ($Chrome)
-    {
+$Chrome
+    {  
         Delete-ChromeHistory
     }
 
-    if ($Firefox)
-    {
+$Firefox
+    {  
         Delete-FirefoxHistory
     }
 
-    if ($InternetExplorer)
-    {
+$InternetExplorer
+    {  
         Delete-IEHistory
     }
     
-    if ($Windows)
+$Windows
     {
         Delete-WindowsHistory
-    }  
+    }
+
+Default 
+    {
+        $All
+    }
+} 
 }
+
